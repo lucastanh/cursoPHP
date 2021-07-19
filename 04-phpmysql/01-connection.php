@@ -3,7 +3,7 @@
 //Example (MySQLi Object-Oriented)
 $servername = "localhost";
 $username = "root";
-$password = "12345";
+$password = "123456";
 $database = "php_mysql_initiating";
 
 // Create connection

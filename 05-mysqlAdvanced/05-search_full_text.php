@@ -1,11 +1,11 @@
 <?php 
 
-$conn = require 'connection.php';
+$conn = require '01-connection.php';
 
 $term = $argv[1] ?? null; // valor 0 é o nome do arquivo 
 $term = '%'.$term.'%';
 
-$stmt = $conn->prepare('SELECT * FROM posts WHERE body LIKE ?');
+$stmt = $conn->prepare('SELECT *, MATCH(title, body) AGAINST(? IN BOOLEAN MODE) score FROM posts ORDER BY score DESC');
 $stmt->bind_param('s', $term);
 
 $stmt->execute();

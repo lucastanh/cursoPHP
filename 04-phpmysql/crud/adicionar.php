@@ -38,9 +38,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     <form action="" method="POST">
         <input type="text" name="email" >
         <input type="submit" value="Submit">
+        <p><?php echo $msg_error; ?></p>
     </form>
-
-    <p><?php echo $msg_error; ?></p>
 
     <p><a href="index.php">voltar</a></p>
 </body>

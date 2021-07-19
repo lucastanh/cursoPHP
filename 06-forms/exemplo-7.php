@@ -6,10 +6,12 @@
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     extract($_POST);
-
+   
     var_dump($nome, $idade);
 
-    $data = compact('nome', 'data', '_POST');
+    var_dump($_POST);
+
+    $data = compact('nome', 'idade', '_POST');
 
     var_dump($data);
 }

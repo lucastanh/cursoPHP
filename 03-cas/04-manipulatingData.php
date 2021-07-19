@@ -5,7 +5,7 @@
 require __DIR__.'\session.php';
 
 // $_SESSION['user'] = [
-//     'name' => "Lucas",
+//     "name" => "Lucas",
 //     "age" => 20,
 //     "active" => true,
 //     "rate" => 4.3,

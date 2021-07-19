@@ -45,9 +45,9 @@ $user = $result->fetch_assoc();
     <form action="" method="POST">
         <input type="text" name="email" value="<?php echo $user['email'] ?>">
         <input type="submit" value="Submit">
+        <p><?php echo $msg_error; ?></p>
     </form>
 
-    <p><?php echo $msg_error; ?></p>
 
     <p><a href="ver.php?id=<?php echo $id ?>">voltar</a></p>
 </body>

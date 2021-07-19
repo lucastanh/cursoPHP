@@ -1,6 +1,6 @@
 <?php 
 
-$conn = require 'connection.php';
+$conn = require '01-connection.php';
 
 $sql = 'SELECT * FROM likes l 
         INNER JOIN users u ON l.user_id = u.id

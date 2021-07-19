@@ -5,7 +5,9 @@ $id2 = $_GET['id2'] ?? 4;
 
 $conn = new mysqli('localhost', 'root', '123456', 'php_mysql_initiating');
 
-$stmt = $conn->prepare('SELECT * FROM users where id > ? and id < ?');
+$sql = 'SELECT * FROM users WHERE id > ? and id < ?';
+
+$stmt = $conn->prepare($sql);
 
 /* 
 * i = integer

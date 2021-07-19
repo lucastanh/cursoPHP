@@ -3,7 +3,7 @@
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $idade = $_POST['idade'] ?? null;
 
-    if(!is_null(($idade))) {
+    if(!is_null($idade)) {
         $idade = (int)$idade;
     } else {
         die('Campo idade não está definido');

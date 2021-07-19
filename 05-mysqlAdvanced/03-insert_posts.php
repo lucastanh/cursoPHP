@@ -1,12 +1,12 @@
 <?php 
 
-$conn = require 'connection.php';
+$conn = require '01-connection.php';
 
 $save = true;
 
 $conn->query('TRUNCATE posts');
 
-$sql = file_get_contents(__DIR__.'/insert_posts.sql');
+$sql = file_get_contents(__DIR__.'/03-insert_posts.sql');
 
 $conn->begin_transaction();
 $conn->query($sql);

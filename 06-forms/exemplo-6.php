@@ -6,7 +6,9 @@
 */
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $nome = !empty($_POST['nome']) ? $_POST['nome'] : null;
 
+    echo $nome;
 }
 ?>
 

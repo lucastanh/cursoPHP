@@ -14,12 +14,15 @@ if($conn->connect_error) {
 $sql = 'SELECT * FROM users';
 $result = $conn->query($sql);
 
+// var_dump($result);
 
 // 1 method
-$users = $result->fetch_all(MYSQLI_ASSOC);
-// foreach($users as $user) {
-//     echo "<li>Id: {$user['id']} - Email: {$user['email']} </li>";
-// }
+if($result->num_rows > 0) {
+    $users = $result->fetch_all(MYSQLI_ASSOC);
+    foreach($users as $user) {
+        echo "<li>Id: {$user['id']} - Email: {$user['email']} </li>";
+    }
+}
 
 
 // 2 method

@@ -1,6 +1,6 @@
 <?php 
 
-$conn = require 'connection.php';
+$conn = require '01-connection.php';
 
 $one_to_one = 'SELECT *, count(a.id) FROM posts a LEFT JOIN comments b ON a.id = b.post_id WHERE a.id = 1 GROUP BY a.id';
 $one_to_many = 'SELECT * FROM posts a LEFT JOIN comments b ON a.id = b.post_id WHERE a.id = 1';

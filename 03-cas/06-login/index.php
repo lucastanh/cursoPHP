@@ -2,6 +2,7 @@
 
 require __DIR__.'\..\session.php';
 
+
 $user = $_SESSION['user'] ?? null; // coalese operator
 
 if(!$user) {
@@ -12,4 +13,4 @@ if(!$user) {
 
 <h1>Página protegida</h1>
 
-<p>Olá, <?php echo $user['email']; ?></p>
+<p>Olá <?php echo $user['name'] . ', seu email é ' . $user['email']?></p>

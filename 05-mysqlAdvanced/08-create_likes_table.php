@@ -1,9 +1,9 @@
 <?php 
 
-$conn = require 'connection.php';
+$conn = require '01-connection.php';
 
-$conn->query('DROP users');
-$conn->query('DROP likes');
+$conn->query('DROP TABLE users');
+$conn->query('DROP TABLE likes');
 
 $sql = '
     CREATE TABLE users(

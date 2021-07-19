@@ -25,3 +25,5 @@ if($conn->connect_errno) {
 }
 
 echo $conn->host_info;
+
+$conn->close();

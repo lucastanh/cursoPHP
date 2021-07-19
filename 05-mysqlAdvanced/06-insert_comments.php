@@ -1,12 +1,12 @@
 <?php 
 
-$conn = require 'connection.php';
+$conn = require '01-connection.php';
 
 $save = true;
 
 $conn->query('TRUNCATE comments');
 
-$sql = file_get_contents(__DIR__.'/insert_comments.sql');
+$sql = file_get_contents(__DIR__.'/06-insert_comments.sql');
 
 $conn->begin_transaction();
 $conn->query($sql);

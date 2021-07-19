@@ -10,11 +10,14 @@ if($conn->connect_errno) {
     die('Connection failed: ('. $conn->connect_errno .') ' . $conn->connect_error);
 }
 
-// sql to create table
-// $sql = 'CREATE TABLE users (
-//     id INT AUTO_INCREMENT PRIMARY KEY,
-//     email VARCHAR(255) NOT NULL
-// )';
+// SQL to create an table
+$sql = 'CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL
+)';
+
+echo $conn->query($sql);
+
 
 // if($conn->query($sql)) {
 //     echo "Table created successfully";
@@ -22,8 +25,8 @@ if($conn->connect_errno) {
 //     echo "Error creating table: $conn->error";
 // }
 
-// sql to insert data
-$sql = 'INSERT INTO users VALUESs (default, "lucas@email.com")';
+// SQL to insert data
+$sql = 'INSERT INTO users VALUES (default, "lucas@email.com")';
 
 if($conn->query($sql)) {
     $last_id = $conn->insert_id;

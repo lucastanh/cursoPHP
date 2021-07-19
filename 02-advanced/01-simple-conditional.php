@@ -7,4 +7,3 @@ if ($raining) {
 } else {
     echo "i go to the pool";
 }
-

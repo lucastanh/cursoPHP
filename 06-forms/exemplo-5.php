@@ -1,5 +1,5 @@
-https://www.php.net/manual/en/function.filter-input.php
-https://www.w3schools.com/php/func_filter_input.asp
+<!-- https://www.php.net/manual/en/function.filter-input.php
+https://www.w3schools.com/php/func_filter_input.asp -->
 
 <?php
 
@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
     $idade = filter_input(INPUT_POST, 'idade', FILTER_SANITIZE_NUMBER_INT);
 
-    $data = filter_input_array(INPUT_POST, FILTER_SANITIZE_NUMBER_INT); // aplly filter in all elements
+    $data = filter_input_array(INPUT_POST); // aplly filter in all elements
 
     var_dump($data);
 }
@@ -25,8 +25,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 </head>
 <body>
     <form action="" method="POST">
-        <input type="text" name="nome[]" placeholder="nome">
-        <input type="text" name="nome[]" placeholder="idade">
+        <input type="text" name="user[]" placeholder="nome"><br>
+        <input type="text" name="user[]" placeholder="idade"><br>
         <input type="submit" value="Enviar">
     </form>
 </body>

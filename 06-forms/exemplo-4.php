@@ -31,8 +31,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 </head>
 <body>
     <form action="" method="POST">
-        <input type="submit" value="Enviar">
         <input type="text" name="nome" placeholder="nome">
+        <input type="submit" value="Enviar">
     </form>
 </body>
 </html>

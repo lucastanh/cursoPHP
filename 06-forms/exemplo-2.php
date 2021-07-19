@@ -16,9 +16,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 </head>
 <body>
     <form action="" method="POST" enctype="multipart/form-data">
-        <input type="text" name="nemail"><br><br>
-        <input type="color" name="come" require="require"><br><br>
-        <input type="email" name="olor"><br><br>
+        <input type="text" name="name"><br><br>
+        <input type="color" name="color" require="require"><br><br>
+        <input type="email" name="email"><br><br>
         <input type="date" name="date"><br><br>
         <input type="file" name="file"><br><br>
         <input type="number" name="number"><br><br>

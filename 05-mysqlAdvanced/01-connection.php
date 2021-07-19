@@ -17,7 +17,6 @@ if($debug) {
 }
 
 
-
 $conn = new mysqli('localhost', 'root', '123456', 'php_mysql_advancing');
 
 if($conn->connect_error) {

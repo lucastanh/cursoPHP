@@ -2,7 +2,7 @@
 
 // var_dump($_GET);
 
-$fname = isset($_GET['name']) ? $_GET['name'] : false;
+$fname = $_GET['name'] ?? null;
 
 if($fname) {
     echo $fname;

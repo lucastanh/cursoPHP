@@ -1,17 +1,17 @@
 <?php 
 
-$conn = require 'connection.php';
+$conn = require '01-connection.php';
 
 $save = true;
 
 $conn->query('TRUNCATE users');
 $conn->query('TRUNCATE likes');
 
-$sql = file_get_contents(__DIR__.'/insert_likes.sql');
-$sql2 = file_get_contents(__DIR__.'/insert_users.sql');
+$sql1 = file_get_contents(__DIR__.'/08-insert_likes.sql');
+$sql2 = file_get_contents(__DIR__.'/08-insert_users.sql');
 
 $conn->begin_transaction();
-$conn->query($sql);
+$conn->query($sql1);
 $conn->query($sql2);
 
 if($save) {

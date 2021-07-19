@@ -1,6 +1,6 @@
 <?php 
 
-$conn = require 'connection.php';
+$conn = require '01-connection.php';
 
 $sql = '
     CREATE TABLE posts (

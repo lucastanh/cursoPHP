@@ -1,0 +1,9 @@
+vantagens do mysqli:
+    Object-oriented interface
+    Support for Prepared Statements
+    Support for Multiple Statements
+    Support for Transactions
+    Enhanced debugging capabilities
+    Embedded server Support
+
+

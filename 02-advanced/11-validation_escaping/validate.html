@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Validation</title>
+</head>
+<body>
+    <h1>PHP Form</h1>
+
+    <hr>
+
+    <form action="validate.php" method="POST">
+        <input name="fname" type="text" placeholder="First Name" class="block">
+        <input name="lname" type="text" placeholder="Last Name" class="block">
+        <input name="email" type="email" placeholder="Email" class="block">
+
+        <fieldset>
+            <legend>Interest Area</legend>
+            <input type="checkbox" name="interest[]" value="science"> Science <br>
+            <input type="checkbox" name="interest[]" value="religion"> Religion <br>
+            <input type="checkbox" name="interest[]" value="fashion"> Fashion <br>
+            <input type="checkbox" name="interest[]" value="purchase"> Purchases <br>
+        </fieldset>
+        <br>
+
+        <label for="where_meet">Where did you meet:</label>
+        <select name="where_meet" id="">
+            <option value="google">Google</option>
+            <option value="cisco">Cisco</option>
+            <option value="w3schools">W3Schools</option>
+        </select>
+        <br><br>
+
+        <label for="message">Message</label>
+        <textarea name="message" id="" cols="30" rows="10"></textarea>
+        <br><br>
+
+        <fieldset>
+            <legend>Redirect to:</legend>
+            <input type="radio" name="redirect" value="home"> Home <br>
+            <input type="radio" name="redirect" value="contact"> Contact <br>
+        </fieldset>
+
+        <hr>
+
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

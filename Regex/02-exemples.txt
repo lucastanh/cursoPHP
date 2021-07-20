@@ -1,0 +1,41 @@
+Com o objetivo principal de apresentar a linguagem C++ de maneira simples e clara 
+e mostrar como ela pode ser usada para a criação de programas profissionais, 
+este livro foi planejado para um curso completo de programação em linguagem C++.
+Os exemplos expostos podem ser facilmente adaptados para qualquer área de aplicação. O conteúdo reúne
+informações necessárias para o aprendizado de outras linguagens de programação orientada a objetos,
+como Visual C++, C#, Visual Basic, Builder C++, C++ em Linux e em Java, entre outras.
+
+algumaçãoxxx
+outracoisaçõesyyy
+
+namoradoASDasd123asd1234asd21as3s21das5d65s1d2_______
+namorada12334589
+
+
+ | -> OR -> alternance symbol -> "ção|ções|lin"
+
+ () -> grouping -> "(alguma|outracoisa)ç(ão|ões)(xxx|yyy)"
+
+Quantifiers:
+    n? -> Matches any string that contains zero or one occurrences of n -> 0 or 1
+    n* -> Matches any string that contains zero or more occurrences of n -> 0 or infinite
+    n+ -> Matches any string that contains at least one n -> 1 or infinite
+    .n -> one occurrence of any character
+    n{x} -> Matches any string that contains a sequence of X n's
+    n{x,y} -> Matches any string that contains a sequence of X to Y n's
+    n{x,} -> Matches any string that contains a sequence of at least X n's
+
+Intervals: 
+    [abc] -> Find one character from the options between the brackets
+    [^abc] -> Find any character NOT between the brackets
+    [0-9] -> Find one character from the range 0 to 9
+
+\w -> [A-za-z0-9_] -> alfanumérico
+\d -> [0-9] -> numericos
+\s -> whitespace
+^ -> Finds a match as the beginning of a string as in: ^Hello
+$ -> Finds a match at the end of the string as in: World$
+(?!) -> denial -> 
+
+asadasdasdas123312123123231
+ 

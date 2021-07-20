@@ -1,0 +1,12 @@
+Search or validation in a chain of characters
+
+Regex -> Regular expression -> Expressão regular
+
+Linked to the formal concept -> predefined symbols and rules
+
+Engines:
+    POSIX -> UNIX | PHP
+ 
+Regular expression -> Text -> Automatos finitos
+
+Alan Turing

@@ -1,7 +1,18 @@
-<?php 
+<?php
 
-$name = filter_input(INPUT_POST, 'name');
-$email = filter_input(INPUT_POST, 'email');
-$description = filter_input(INPUT_POST, 'description');
+session_start();
 
-var_dump($name, $email, $description);
+include '01-crsf.php';
+include '02-captcha.php';
+include '01-get_data.php';
+
+
+// \ escape
+// ^ inicio
+// $ fim
+// . qualquer caracter
+// * 0 ou mais
+// + 1 ou mias
+// {n, m} minimo, maximo
+// [a-zA-z] intervalo
+

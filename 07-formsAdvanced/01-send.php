@@ -3,7 +3,7 @@
 session_start();
 
 include '01-crsf.php';
-// include '02-captcha.php';
+include '02-captcha.php';
 include '01-get_data.php';
 
 // REGEX
@@ -17,6 +17,6 @@ include '01-get_data.php';
 // [a-zA-z] intervalo
 
 $url = filter_input(INPUT_POST, 'url');
-$pattern = '//';
+$pattern = '/^w{3}\.[a-zA-Z]+\.[a-zA-Z]+[a-zA-z\.]*$/';
 
 var_dump(preg_match($pattern, $url), $url);

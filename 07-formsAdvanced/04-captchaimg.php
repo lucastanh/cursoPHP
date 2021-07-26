@@ -15,7 +15,7 @@ $palavra = substr($palavra, 0, 5);
 
 $_SESSION['captcha'] = $palavra;
 
-imagecolorallocate($image, 0, 0, 0); // background-color
+imagecolorallocate($image, 255, 255, 255); // background-color
 $cor = imagecolorallocate($image, 255, 0, 0);
 
 imagettftext($image, 30, rand(-5, 5), rand(40, 80), rand(40, 80), $cor, __DIR__.'/font.ttf', $palavra);

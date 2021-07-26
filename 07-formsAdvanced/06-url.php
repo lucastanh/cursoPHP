@@ -18,5 +18,3 @@ if(preg_match($pattern, $url, $matches)) {
 } else {
     die("URL is invalid");
 }
-
-var_dump($url);

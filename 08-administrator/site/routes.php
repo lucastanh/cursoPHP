@@ -1,9 +1,10 @@
 <?php 
 
 if(resolve('/')) {
-    echo 'Home';
+    render('site', 'site/home');
 } elseif (resolve('/contato')) {
-    echo 'Página de contato';
+    render('site', 'site/contato');
 } else {
+    http_response_code(404);
     echo 'Página não encontrada';
 }

@@ -1,16 +1,10 @@
 <?php
 
-function resolve($route) {
-    $path = $_SERVER['PATH_INFO'] ?? '/'; // /admin
-
-    $route = '/^' . str_replace('/', '\/', $route) . '$/';
-
-    if(preg_match($route, $path, $params)) {
-        return $params;
-    }
-
-    return false;
-}
+require __DIR__.'/config.php';
+require __DIR__.'/src/error_handler.php';
+require __DIR__.'/src/resolve-route.php';
+require __DIR__.'/src/render.php';
+require __DIR__.'/src/connection.php';
 
 if (resolve('/admin/?(.*)')) {
     require __DIR__.'/admin/routes.php';

@@ -1,0 +1,3 @@
+URL -> Uniform Resource Locator -> localizador padrão de recursos
+
+HTTP -> Hyper Text Transfer Protocol -> Protocole de Transferencia de Hypertexto

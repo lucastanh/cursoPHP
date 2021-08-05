@@ -22,12 +22,23 @@ DNS:
 		servidores autoritativos
 	resolver -> recursivo -> raiz -> recursivo -> autoritativo .br -> recursivo -> autoritativo do dominio -> recursivo -> resolver
 
-	O browser envia a requisição para o servidor mas essa requisição não vai diretamente, antes ela passa por uma série de roteadores espalhados pelo mundo, quem se encarrega de descobrir qual o caminho 
-em que essa requisição vai percorrer é o protocolo IP.
-	O protocolo IP consiste basicamente todos os dispositivos terem um endereço e toda informação que vai ser passada são divididas em pacotes e entiquetados com o endereço de origem 
-e o endereço de destino, nesse meio tempo tambem está o DNS.
-	O DNS consite em uma lista de endereços IPs e seus nomes, como essa lista é muito grande elas são divididas em country codes ou generic Top Level domains,
-o que acontece no DNS é que no nosso computador temos um sistema chamado resolver que consulta um servidor chamado recursivo que normalmente está nos provedores de internet, o servidor recursivo pergunta para o servidor raiz,
-o servidor raiz pergunta para o autoritativo do ccTLDs ou gTLDS, estes perguntam para o autoritativo do dominio e então se tem a resposta para o servidor recursivo que manda a resposta para o resolver, nesse processo se obtem
-o caminho necessário para o trafego de uma requisição desde a origem que é o nosso navegador até o destino que é algum servidor em outra parte do mundo.
-	
+	Quando fazemos uma requisição HTTP, essa requisição sai da camada de aplicação a qual foi configurada e vai para a camada de transporte.
+	A camada de transporte se preocupa somente em como as informações vão ser transportadas, existem vários protocolos nessa camada e os principais 
+são o TCP(Transfer Control Protocol) e o UDP(User Datagram Protocol). Em resumo o TCP se preocupa com a integridade do transporte, isso significa que
+ele cuida para que todos os pacotes cheguem ao destino e todos eles na ordem que foram enviados, isso o torna um protocolo mais lento.
+Já o UDP se preocupa mais com a velocidade em que esses pacotes serão transportados sendo assim não se preocupando tanto com a integridade podendo haver
+perca de pacotes durante o caminho. Depois de definido como vai ser o transporte, a requisição entra na camada de rede(ou internet).
+	Na camada de rede é definido qual o caminho a requisição será feita e quem se encarrega disso é o protocolo IP(Internet Protocol). O IP funciona basicamente
+sobre duas regras, primeiro, todo dispositivo na rede tem um endereço, segundo, toda informação passada pela rede é dividida em pacotes e estes são entiquetados
+com o endereço de origem e o endereço de destino. Precisamos saber tambem que o caminho entre a origem e o servidor de destino não é uma linha reta,
+entre eles existem outros servidores, e o IP se encarrega de decobrir qual caminho percorrer e nesse meio tempo tambem entra o DNS(Domain Name System).
+	O DNS é uma tabela de IPs e seus nomes como google.com, youtube.com, etc... Como essa tabela é muito grande ela é dividida em tabelas menores, pra começar
+temos o servidor raíz que tem as informações sobre as principais partes em que é dividida essa tabela, esses são os domínios de primeiro nível e existem dois 
+tipos deles, o Country Code e o Generic Top Level Domains, o ccTDLs é atrelado aos paises como o .br, .pt e o gTDLs que não são atrelados a países específicos(.com).
+	Quando a requisição é feita existe um sistema no nosso dispositivo chamado resolver, esse é responsavel juntamente com o IP de descobrir o caminho
+do servidor de destino, o resolver pergunta para o servidor recursivo que normalmente fica no provedor de internet, o recursivo pergunta para o servidor raíz
+que direciona para o autoritativo do ccTDLs ou gTDLs que redireciona para o autoritativo do dominio, que da a resposta final para o recursivo que entrega
+essa resposta para o resolver, sendo assim, temos o caminho necessário para nossa requisição.
+	Depois disso entra na camada física aonde são emitidos sinais elétricos que formam as informações, quando a requisição chega no servidor lá existem
+vários programas rodando ao mesmo tempo, para redirecionar para o programa certo são usadas as portas, a porta usada para o HTTP normalmente é a 80, 
+lá está rodando programas como o apache ou nginx que sçao capazes de interpretar requisições HTTP.

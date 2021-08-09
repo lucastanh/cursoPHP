@@ -16,6 +16,7 @@ Sistemas autônomos, BGP, PTTs:
 
 DNS:
 	Domain Name System(DNS)
+	Hierarquico e distribuido
 	a lista de nomes é muito grande então são divididas em domínios de primeiro nível:
 		ccTLDs: Country Code Top Level Domains
 		gTLDs: Generic Top Level Domains
@@ -31,7 +32,7 @@ perca de pacotes durante o caminho. Depois de definido como vai ser o transporte
 	Na camada de rede é definido qual o caminho a requisição será feita e quem se encarrega disso é o protocolo IP(Internet Protocol). O IP funciona basicamente
 sobre duas regras, primeiro, todo dispositivo na rede tem um endereço, segundo, toda informação passada pela rede é dividida em pacotes e estes são entiquetados
 com o endereço de origem e o endereço de destino. Precisamos saber tambem que o caminho entre a origem e o servidor de destino não é uma linha reta,
-entre eles existem outros servidores, e o IP se encarrega de decobrir qual caminho percorrer e nesse meio tempo tambem entra o DNS(Domain Name System).
+entre eles existem outros servidores, e o IP se encarrega de decobrir qual caminho percorrer usando o DNS.
 	O DNS é uma tabela de IPs e seus nomes como google.com, youtube.com, etc... Como essa tabela é muito grande ela é dividida em tabelas menores, pra começar
 temos o servidor raíz que tem as informações sobre as principais partes em que é dividida essa tabela, esses são os domínios de primeiro nível e existem dois 
 tipos deles, o Country Code e o Generic Top Level Domains, o ccTDLs é atrelado aos paises como o .br, .pt e o gTDLs que não são atrelados a países específicos(.com).
@@ -41,4 +42,4 @@ que direciona para o autoritativo do ccTDLs ou gTDLs que redireciona para o auto
 essa resposta para o resolver, sendo assim, temos o caminho necessário para nossa requisição.
 	Depois disso entra na camada física aonde são emitidos sinais elétricos que formam as informações, quando a requisição chega no servidor lá existem
 vários programas rodando ao mesmo tempo, para redirecionar para o programa certo são usadas as portas, a porta usada para o HTTP normalmente é a 80, 
-lá está rodando programas como o apache ou nginx que sçao capazes de interpretar requisições HTTP.
+lá está rodando programas como o apache ou nginx que são capazes de interpretar requisições HTTP.
